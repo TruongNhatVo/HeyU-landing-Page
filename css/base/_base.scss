@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    transition: all 400ms;
+}
+body {
+    font-family: $font-body;
+    overflow-x: hidden;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+h1, h2, h3, h4, h5, h5, h6 {
+    font-family: $font-body;
+}
+p {
+    font-family: $font-body;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+li, ol {
+    list-style: none;
+}
+button, input, a {
+    &:focus {
+        outline: none;
+    }
+}
+strong {
+    font-weight: bold;
+}

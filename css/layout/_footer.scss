@@ -1,0 +1,43 @@
+/*======================================
+        Footer
+======================================*/
+.footer {
+	border-top: 1px solid $color-bd;
+	padding: 25px 0;
+	@include clearfix;
+	&-nav {
+		max-width: 667px;
+		width: 100%;
+		float: left;
+		@include clearfix;
+		li {
+			float: left;
+			width: calc( 100% / 5 );
+		}
+		a {
+			display: block;
+			text-align: center;
+			padding: 15px 0;
+			&:hover {
+				text-decoration: line-through;
+			}
+		}
+	}
+	&-lang {
+		float: right;
+		text-align: right;
+		padding-right: 50px;
+		max-width: 267px;
+		width: 100%;
+		select {
+			width: 100%;
+			border: 0;
+			background: $color-input;
+			@extend %border-radius;
+			padding: 20px 30px;
+			text-align: left;
+			appearance: none;
+			background: url('../img/arrow_bottom.png') 90% 24px no-repeat,$color-input;
+		}
+	}
+}

@@ -1,0 +1,275 @@
+/*-----------------------------------------
+    780px <  Responsive for device < 1200px
+-----------------------------------------*/
+@media (max-width: 1200px) and (min-width: 780px) {
+/*------------------------------------
+
+    index.html
+
+------------------------------------*/
+
+/*-------------- main ------------*/
+	.main {
+		.title {
+			left: 30px;
+		}
+	}
+
+/*-------------- local01 ------------*/
+	.local01 {
+		.group-img {
+			left: 0;
+		}
+	}
+}
+
+/*-----------------------------------------
+        Responsive for device < 780px
+-----------------------------------------*/
+@media screen and (max-width: 780px) {
+	/*------------------- Component -------------------*/
+
+	// /*------------------- Typography -------------------*/
+	.title-h2 {
+	    font-size: 8.2vw;
+	    line-height: 1.3;
+	}
+	// **********************************
+	//   PALACEHOLDER
+	// **********************************
+	.wrapper {
+		min-width: 100%;
+		overflow-x: hidden; 
+	}
+	%group-img,
+	%content {
+		width: 100%;
+		float: none;
+	}
+	%content {
+		text-align: center;
+	}
+    .is_pc {
+        display: none;
+    }
+    .is_sp {
+        display: inherit;
+    }
+    /*======================================
+	    Header
+	======================================*/ 
+	.header {
+		min-width: inherit;
+		overflow: hidden;
+		position: fixed;
+		background: $color-primary;
+		.logo {
+			font-size: 45px;
+			padding: 10px;
+			width: auto;
+		}
+		#main-nav {
+			opacity: 0;
+			visibility: hidden;
+			position: fixed;
+			background: rgba(black, 0.4);
+			top: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 99;
+			max-width: 100%;
+			ul {
+				z-index: 9999;
+				width: 50%;
+				background: white;
+				position: absolute;
+				right: -100%;
+				height: 100%;
+				li {
+					width: 100%;
+				}
+				a {
+					text-align: center;
+					color: red;
+					font-weight: 900;
+					border-bottom: 1px solid $color-primary;
+					background: url('../img/left-arrow.png') 15px 25px no-repeat;
+					padding: 25px 0;
+					font-size: 14px;
+				}
+			}
+			&.active {
+				opacity: 1;
+				visibility: visible;
+				ul {
+					right: 0;
+					transition-delay: 200ms;
+				}
+			}
+		}
+	}
+    /*------------------------------------
+
+    	index.html
+
+	------------------------------------*/
+	/*-------------- main ------------*/
+	.main {
+		text-align: center;
+		.title {
+			padding-top: 40%;
+			position: relative;
+			width: 100%;
+			h2 {
+	            font-size: 9vw;
+	            line-height: 1.3;
+	        }
+			h3 {
+	            padding-bottom: 50px;
+	            font-size: 18px;
+	            line-height: 1.778;
+	        }
+		}
+		&-img {
+	        padding-top: 40px;
+	        float: none;
+	        width: 100%;
+	    }
+	}
+	/*-------------- local01 ------------*/
+	.local01 {
+		padding-top: 120px;
+		.group-img {
+			left: 0;
+			max-width: 600px;
+			width: 100%;
+			margin: auto;
+			.bottom-img {
+				left: initial;
+				right: 0;
+			}
+		}
+		.content {
+			padding-top: 0;
+			.txt {
+	            padding-bottom: 120px;
+	        }
+		}
+	}
+	/*-------------- local02 ------------*/
+	.local02 {
+		.group-img {
+			.bottom-img {
+				right: initial;
+				left: 2vw;
+			}
+		}
+		.content {
+			padding-top: 0;
+			.txt {
+				padding-bottom: 80px;
+			}
+		}
+
+	}
+
+	/*-------------- comment ------------*/
+	.comment {
+		.block-group {
+			li {
+				width: 100%;
+				float: none;
+				&:nth-child(1) {
+	                padding-right: 0;
+	                padding-top: 0;
+	            }
+	            &:nth-child(2) {
+	                padding: 0;
+	                padding-top: 30px;
+	            }
+	            &:nth-child(3) {
+	                padding-left: 0;
+	                padding-top: 30px;
+	            }
+			}
+		}
+	}
+	/*-------------- local03 ------------*/ 
+	.local03 {
+		padding: 80px 0 60px;
+		margin: 100px 0 80px;
+		&:after {
+			content: '';
+		}
+		.content {
+			&.bottom {
+				margin-bottom: 30px;
+			}
+			margin-bottom: 30px;
+		}
+		.group-content {
+			width: 100%;
+			&-left,&-right {
+				float: none;
+				text-align: left;
+				.content  {
+					padding: 0 0 0 30%;
+					&:after {
+                    	left: 3vw;
+                	}
+				}
+			}
+		}
+	}
+	/*-------------- local04 ------------*/
+	.local04 {
+		form {
+			@include clearfix;
+			input {
+				width: 100%;
+			}
+			button {
+				right: 0;
+				margin-top: 20px;
+			}
+		}
+	}
+	/*-------------- download ------------*/ 
+	.download  {
+		padding-top: 60px;
+		.title-h2 {
+			padding-bottom: 25px;
+		}
+		.txt {
+			padding-bottom: 20px;
+		}
+		.download-app {
+			padding-bottom: 80px;
+		}
+	}
+	/*======================================
+	    footer
+	======================================*/
+	.footer {
+		padding-top: 0;
+		&-nav {
+			max-width: initial;
+			li {
+				width: 100%;
+				border-bottom: 2px solid white;	
+				color: white;
+				background: $color-primary;
+			}
+		}
+		&-lang {
+			margin-top: 20px;
+			text-align: center;
+			max-width: initial;
+			padding-right: 0;
+			select {
+				width: 60%;
+			}
+		}
+	}
+
+}

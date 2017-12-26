@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Ubuntu');
+// **********************************
+//   font-family
+// **********************************
+$font-body: 'Lato',
+'Ubuntu',
+sans-serif;
+// **********************************
+//   COLOR
+// **********************************
+// Brand Color
+$color-primary: #e7434e;
+
+// Application Color
+$color-a: #363636;
+$color-b: #808080;
+$color-c: #e73233;
+$color-d: #667386;
+$color-bd: #e0e0e0;
+$color-input:#f8f8f8;
+
+
+// **********************************
+//   PALACEHOLDER
+// **********************************
+%box-shadow {
+    box-shadow: 5px 8.66px 40px 0px rgba(54, 54, 54, 0.57);
+}
+
+%border-radius {
+    border-radius: 30px;
+}
+
+%linear-background {
+    background: linear-gradient( 90deg, rgb(235, 64, 44) 0%, rgb(217, 6, 71) 100%);
+}
+%group-img {
+	width: 50%;
+	position: relative;
+	float: left;
+}
+%content {
+	width: 50%;
+	float: right;	
+}
+%btn {
+    display: inline-block;
+    @extend %box-shadow;
+    @extend %border-radius;
+    text-align: center;
+    padding: 14px 0;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    transition: all .2s ease-in-out;
+    &:hover {
+    	box-shadow: 5px 8.66px 40px 0px rgba(54, 54, 54, 1); 	
+    	color: red;
+		left: 5px;
+    }
+}
+
+// **********************************
+//   EXTENDS
+// **********************************
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+@mixin width($children,
+$parent) {
+    width: round(percentage($children/$parent));
+}
+
+@mixin triangle($direction,
+$sizeH,
+$sizeV,
+$color) {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+
+    @if $direction==top {
+        border-width: 0 $sizeV $sizeH $sizeV;
+        border-color: transparent transparent $color transparent;
+    }
+    @if $direction==bottom {
+        border-width: $sizeV $sizeH 0 $sizeV;
+        border-color: $color transparent transparent transparent;
+    }
+    @if $direction==left {
+        border-width: $sizeV $sizeH $sizeV 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @if $direction==right {
+        border-width: $sizeV 0 $sizeV $sizeH;
+        border-color: transparent transparent transparent $color;
+    }
+    @if $direction==topright {
+        border-width: 0 $sizeH $sizeV 0;
+        border-color: transparent $color transparent transparent;
+    }
+    @if $direction==bottomright {
+        border-width: 0 0 $sizeH $sizeV;
+        border-color: transparent transparent $color transparent;
+    }
+    @if $direction==bottomleft {
+        border-width: $sizeH 0 0 $sizeV;
+        border-color: transparent transparent transparent $color;
+    }
+    @if $direction==topleft {
+        border-width: $sizeH $sizeV 0 0;
+        border-color: $color transparent transparent transparent;
+    }
+}

@@ -1,0 +1,355 @@
+/*------------------------------------
+
+            index.html
+
+------------------------------------*/
+
+
+/*-------------- main ------------*/
+
+.main {
+    position: relative;
+    &-bg {
+        @extend %linear-background;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform-origin: 0 100%;
+        transform: skewY(-8deg);
+    }
+    .container {
+        position: relative;
+        color: white;
+        font-weight: bold;
+    }
+    .title {
+        @include width(800, 1200);
+        position: absolute;
+        top: 30%;
+        left: 0;
+        h2 {
+            font-size: 72px;
+            font-weight: bold;
+            padding-bottom: 42px;
+        }
+        h3 {
+            padding-bottom: 100px;
+            font-size: 24px;
+        }
+        .download-btn {
+            @extend %btn;
+            background: white;
+            width: 225px;
+            color: $color-primary;
+        }
+    }
+    &-img {
+        padding-top: 194px;
+        float: right;
+        width: 40%;
+    }
+}
+
+
+
+/*-------------- local01 ------------*/
+
+.local01 {
+    .group-img {
+        @extend %group-img;
+        left: -45px;
+        .top-img,
+        .bottom-img {
+            position: absolute;
+            @extend %box-shadow;
+        }
+        .top-img {
+            top: 0;
+            left: 0;
+        }
+        .bottom-img {
+            top: 80px;
+            left: 190px;
+            z-index: 1;
+        }
+    }
+    .content {
+        @extend %content;
+        padding-top: 245px;
+        .title-h2 {
+            padding-bottom: 35px;
+        }
+        .txt {
+            padding-bottom: 235px;
+        }
+    }
+}
+
+
+
+/*-------------- local02 ------------*/
+
+.local02 {
+    .group-img {
+        @extend %group-img;
+        float: right;
+        .top-img,
+        .bottom-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            @extend %box-shadow;
+        }
+        .bottom-img {
+            top: 60px;
+            right: 174px;
+            z-index: 1;
+        }
+    }
+    .content {
+        @extend %content;
+        float: left;
+        padding-top: 188px;
+        .title-h2 {
+            padding-bottom: 30px;
+        }
+        .txt {
+            padding-bottom: 180px;
+        }
+    }
+}
+
+
+
+/*-------------- comment ------------*/
+
+.arrow_box {
+    position: relative;
+    border: 1px solid $color-bd;
+    z-index: 99;
+    &:after,
+    &:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        left: 30px;
+    }
+    &:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: #fff;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+    &:before {
+        border-color: rgba(224, 224, 224, 0);
+        border-top-color: $color-bd;
+        border-width: 12px;
+        margin-left: -12px;
+    }
+    &:hover {
+        box-shadow: 15px 25.981px 60px 0px rgba(54, 54, 54, 0.059);
+        border: 1px solid transparent;
+        &:before {
+            border-width: 10px;
+            margin-left: -10px;
+        }
+    }
+}
+
+.comment {
+    border-top: 1px solid $color-bd;
+    padding-top: 92px;
+    .title-h2 {
+        text-align: center;
+        padding-bottom: 95px;
+    }
+    .block-group {
+        @include clearfix;
+        li {
+            float: left;
+            width: 33.33%;
+            &:nth-child(1) {
+                padding-right: 15px;
+                padding-top: 30px;
+            }
+            &:nth-child(2) {
+                padding: 0 15px;
+            }
+            &:nth-child(3) {
+                padding-top: 30px;
+                padding-left: 15px;
+            }
+        }
+        .content {
+            padding: 23px 30px;
+            line-height: 1.778;
+            font-size: 18px;
+            font-style: italic;
+            color: $color-b;
+            p {
+                padding-top: 10px;
+                color: $color-primary;
+                font-weight: bold;
+            }
+        }
+    }
+    .avatar {
+        position: relative;
+        margin-top: 20px;
+        padding-left: 80px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .infor {
+        padding-top: 10px;
+        .name {
+            padding-bottom: 10px;
+            color: $color-a;
+        }
+        .job {
+            padding-bottom: 10px;
+            color: $color-d;
+            font-family: 'Ubuntu', san-serif;
+        }
+    }
+}
+
+
+
+/*-------------- local03 ------------*/
+
+.local03 {
+    @extend %linear-background;
+    color: white;
+    padding: 110px 0 105px;
+    position: relative;
+    margin: 235px 0 220px;
+    &:after {
+        content: url('../img/img_06.png');
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .content {
+        position: relative;
+        &.bottom {
+            margin-bottom: 52px;
+        }
+        &:after {
+            position: absolute;
+            top: 0;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: 900;
+            padding-bottom: 17px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.778;
+        }
+    }
+    .group-content {
+        @include width(415,
+        1200);
+        &-left {
+            float: left;
+            text-align: right;
+            .content {
+                padding: 0 130px 0 40px;
+                &:after {
+                    right: 42px;
+                }
+                &:nth-child(1):after {
+                    content: url('../img/ic_message.png');
+                }
+                &:nth-child(2):after {
+                    content: url('../img/ic_phone.png');
+                }
+            }
+        }
+        &-right {
+            float: right;
+            .content {
+                padding: 0 40px 0 130px;
+                &:after {
+                    left: 42px;
+                }
+                &:nth-child(1):after {
+                    content: url('../img/ic_camera.png');
+                }
+                &:nth-child(2):after {
+                    content: url('../img/ic_video.png');
+                }
+            }
+        }
+    }
+}
+
+
+
+/*-------------- local04 ------------*/
+
+.local04 {
+    text-align: center;
+    .title-h2 {
+        padding-bottom: 45px;
+    }
+    .txt {
+        padding-bottom: 70px;
+    }
+    form {
+        vertical-align: top;
+        font-size: 18px;
+        padding-bottom: 150px;
+        input,
+        button {
+            height: 50px;
+            @extend %border-radius;
+            border: 0;
+        }
+        input {
+            background: $color-input;
+            color: $color-b;
+            padding-left: 30px;
+            max-width: 400px;
+			width: 100%;
+        }
+        button {
+        	cursor: pointer;
+            position: relative;
+            right: 50px;
+            color: white;
+            max-width: 170px;
+            width: 100%;
+            box-shadow: 5px 8.66px 30px 0px rgba(223, 27, 61, 0.118);
+            background: linear-gradient(to right, rgb(235, 64, 44) 0%, rgb(217, 6, 71) 100%);
+        }
+    }
+}
+/*-------------- download ------------*/
+.download {
+	padding-top: 100px;
+	text-align: center;
+	border-top: 1px solid $color-bd;
+	.title-h2 {
+		padding-bottom: 40px;
+	}
+	.txt {
+		padding-bottom: 45px;
+	}
+	.download-app {
+		padding-bottom: 150px;
+	}
+}

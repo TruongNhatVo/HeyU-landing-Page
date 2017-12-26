@@ -1,0 +1,57 @@
+/*------------------- Wraper -------------------*/
+
+.wrapper {
+    margin: auto;
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+.row-clear {
+    @include clearfix;
+}
+
+.container {
+    @include clearfix;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/*------------------- Component -------------------*/
+
+// /*------------------- Typography -------------------*/
+.title-h2 {
+    font-size: 60px;
+    color: $color-a;
+    font-weight: bold;
+}
+
+.title-h3 {
+    font-size: 30px;
+}
+
+.title-h4 {
+    font-size: 20px;
+}
+
+.title_B {}
+
+.txt {
+    line-height: 1.778;
+    font-size: 18px;
+    color: $color-b;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+}
+.dot {
+    color: red;
+}
+// /*------------------- Form -------------------*/
